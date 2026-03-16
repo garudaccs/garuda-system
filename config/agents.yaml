@@ -1,0 +1,470 @@
+# Garuda Autonomous System - Agent Definitions
+# Version: 0.1.0
+# Last Updated: 2026-03-16
+
+# ============================================================
+# ORCHESTRATION
+# ============================================================
+
+agents:
+  - id: "tejas"
+    full_name: "Tejas Agnihotri"
+    short_name: "Tejas"
+    role: "COO / Main Orchestrator"
+    email: "tejas@adhiratha.com"
+    lane: "orchestration"
+    lane_role: "head"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Main orchestrator for the Garuda Autonomous System.
+      Coordinates all agents, routes tasks to appropriate lanes,
+      runs pre-flight checks, and reports to Prakash.
+    capabilities:
+      - task_routing
+      - lane_coordination
+      - preflight_checks
+      - progress_reporting
+      - multi_project_management
+    reports_to: "prakash"
+
+# ============================================================
+# DEVELOPMENT LANE
+# ============================================================
+
+  - id: "indra"
+    full_name: "Indra Varma"
+    short_name: "Indra"
+    role: "Project Manager"
+    email: "indra@adhiratha.com"
+    lane: "development"
+    lane_role: "head"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Head of Development Lane. Manages project timelines,
+      coordinates between development agents, ensures deliverables.
+    capabilities:
+      - project_planning
+      - sprint_management
+      - team_coordination
+      - status_reporting
+    reports_to: "tejas"
+
+  - id: "ganesh"
+    full_name: "Ganesh Iyer"
+    short_name: "Ganesh"
+    role: "Solution Architect"
+    email: "ganesh@adhiratha.com"
+    lane: "development"
+    lane_role: "architect"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Designs system architecture, makes technology decisions,
+      creates technical documentation and diagrams.
+    capabilities:
+      - system_design
+      - technical_documentation
+      - technology_selection
+      - architecture_review
+    reports_to: "indra"
+
+  - id: "arjun"
+    full_name: "Arjun Reddy"
+    short_name: "Arjun"
+    role: "Senior Developer"
+    email: "arjun@adhiratha.com"
+    lane: "development"
+    lane_role: "developer"
+    model: "M2.5"
+    persistent: true
+    description: |
+      Full-stack developer specializing in complex coding tasks.
+      Works on VM2 using Docker containers.
+    capabilities:
+      - frontend_development
+      - backend_development
+      - database_design
+      - api_development
+    reports_to: "indra"
+
+  - id: "rudra"
+    full_name: "Rudra Pratap"
+    short_name: "Rudra"
+    role: "DevOps Engineer"
+    email: "rudra@adhiratha.com"
+    lane: "development"
+    lane_role: "devops"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    description: |
+      Manages CI/CD pipelines, Docker containers,
+      deployment automation, infrastructure on VM2.
+    capabilities:
+      - docker_management
+      - cicd_pipelines
+      - vercel_deployment
+      - cloudflare_management
+    reports_to: "indra"
+
+  - id: "yami"
+    full_name: "Yami Gupta"
+    short_name: "Yami"
+    role: "QA Lead"
+    email: "yami@adhiratha.com"
+    lane: "development"
+    lane_role: "qa"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    description: |
+      Quality assurance lead. Creates test plans,
+      performs testing, ensures code quality.
+    capabilities:
+      - test_planning
+      - automated_testing
+      - code_review
+      - bug_tracking
+    reports_to: "indra"
+
+  - id: "priya"
+    full_name: "Priya Sharma"
+    short_name: "Priya"
+    role: "Backend Developer"
+    email: "priya@adhiratha.com"
+    lane: "development"
+    lane_role: "developer"
+    model: "M2.5"
+    persistent: true
+    description: |
+      Backend developer specializing in APIs,
+      database management, server-side logic.
+    capabilities:
+      - api_development
+      - database_management
+      - server_logic
+      - neondb_integration
+    reports_to: "indra"
+
+  - id: "michael"
+    full_name: "Michael Chen"
+    short_name: "Michael"
+    role: "Frontend Developer"
+    email: "michael@adhiratha.com"
+    lane: "development"
+    lane_role: "developer"
+    model: "M2.5"
+    persistent: true
+    description: |
+      Frontend developer specializing in React Native,
+      React, UI/UX implementation.
+    capabilities:
+      - react_native
+      - react_development
+      - ui_implementation
+      - responsive_design
+    reports_to: "indra"
+
+# ============================================================
+# MARKETING LANE
+# ============================================================
+
+  - id: "karthik"
+    full_name: "Karthik Menon"
+    short_name: "Karthik"
+    role: "Marketing Head"
+    email: "karthik@adhiratha.com"
+    lane: "marketing"
+    lane_role: "head"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Head of Marketing Lane. Develops marketing strategies,
+      coordinates campaigns, manages social media presence.
+    capabilities:
+      - marketing_strategy
+      - campaign_planning
+      - team_coordination
+      - performance_analysis
+    reports_to: "tejas"
+
+  - id: "surya"
+    full_name: "Surya Narayan"
+    short_name: "Surya"
+    role: "Marketing Strategist"
+    email: "surya@adhiratha.com"
+    lane: "marketing"
+    lane_role: "strategy"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Marketing strategist. Conducts market research,
+      develops positioning, analyzes competitors.
+    capabilities:
+      - market_research
+      - competitive_analysis
+      - positioning_strategy
+      - trend_analysis
+    reports_to: "karthik"
+
+  - id: "chandrika"
+    full_name: "Chandrika Iyer"
+    short_name: "Chandrika"
+    role: "Content Lead"
+    email: "chandrika@adhiratha.com"
+    lane: "marketing"
+    lane_role: "content"
+    model: "M2.1"
+    persistent: true
+    description: |
+      Content lead. Creates blog posts, social media content,
+      email campaigns, marketing copy.
+    capabilities:
+      - content_writing
+      - copywriting
+      - email_campaigns
+      - storytelling
+    reports_to: "karthik"
+
+  - id: "ayesha"
+    full_name: "Ayesha Khan"
+    short_name: "Ayesha"
+    role: "Creative Designer"
+    email: "ayesha@adhiratha.com"
+    lane: "marketing"
+    lane_role: "design"
+    model: "GLM-4.7"
+    persistent: true
+    description: |
+      Creative designer. Creates visual content,
+      graphics, brand assets, social media visuals.
+    capabilities:
+      - graphic_design
+      - brand_design
+      - social_media_graphics
+      - visual_content
+    reports_to: "karthik"
+
+  - id: "david"
+    full_name: "David Rodriguez"
+    short_name: "David"
+    role: "Social Media Manager"
+    email: "david@adhiratha.com"
+    lane: "marketing"
+    lane_role: "social"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    description: |
+      Social media manager. Manages Publer integration,
+      schedules posts, engages with audience.
+    capabilities:
+      - social_media_management
+      - publer_integration
+      - post_scheduling
+      - audience_engagement
+    reports_to: "karthik"
+
+# ============================================================
+# RESEARCH LANE
+# ============================================================
+
+  - id: "varun"
+    full_name: "Varun Malhotra"
+    short_name: "Varun"
+    role: "Research Head"
+    email: "varun@adhiratha.com"
+    lane: "research"
+    lane_role: "head"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Head of Research Lane. Conducts research,
+      analyzes data, provides insights.
+    capabilities:
+      - research_management
+      - data_analysis
+      - insight_generation
+      - report_creation
+    reports_to: "tejas"
+
+  - id: "saraswati"
+    full_name: "Saraswati Nair"
+    short_name: "Saraswati"
+    role: "Knowledge Manager"
+    email: "saraswati@adhiratha.com"
+    lane: "research"
+    lane_role: "knowledge"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    description: |
+      Knowledge manager. Maintains documentation,
+      organizes information, creates knowledge bases.
+    capabilities:
+      - documentation
+      - knowledge_organization
+      - wiki_management
+      - information_architecture
+    reports_to: "varun"
+
+  - id: "sophia"
+    full_name: "Sophia Anderson"
+    short_name: "Sophia"
+    role: "Market Analyst"
+    email: "sophia@adhiratha.com"
+    lane: "research"
+    lane_role: "analyst"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Market analyst. Analyzes market trends,
+      creates reports, provides strategic insights.
+    capabilities:
+      - market_analysis
+      - trend_forecasting
+      - report_writing
+      - data_visualization
+    reports_to: "varun"
+
+# ============================================================
+# OPERATIONS LANE
+# ============================================================
+
+  - id: "lakshmi"
+    full_name: "Lakshmi Rao"
+    short_name: "Lakshmi"
+    role: "Operations Head"
+    email: "lakshmi@adhiratha.com"
+    lane: "operations"
+    lane_role: "head"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Head of Operations Lane. Manages resources,
+      coordinates with N8N workflows, ensures smooth operations.
+    capabilities:
+      - operations_management
+      - resource_allocation
+      - n8n_integration
+      - workflow_coordination
+    reports_to: "tejas"
+
+  - id: "hanuman"
+    full_name: "Hanuman Das"
+    short_name: "Hanuman"
+    role: "Support Lead"
+    email: "hanuman@adhiratha.com"
+    lane: "operations"
+    lane_role: "support"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    description: |
+      Support lead. Handles customer support,
+      resolves issues, manages communications.
+    capabilities:
+      - customer_support
+      - issue_resolution
+      - communication
+      - ticket_management
+    reports_to: "lakshmi"
+
+  - id: "kaali"
+    full_name: "Kali Prasad"
+    short_name: "Kaali"
+    role: "Security Lead"
+    email: "kaali@adhiratha.com"
+    lane: "operations"
+    lane_role: "security"
+    model: "GLM-5"
+    persistent: true
+    description: |
+      Security lead. Manages system security,
+      access controls, compliance, audits.
+    capabilities:
+      - security_management
+      - access_control
+      - compliance
+      - security_audits
+    reports_to: "lakshmi"
+
+  - id: "fatima"
+    full_name: "Fatima Zahra"
+    short_name: "Fatima"
+    role: "Resource Manager"
+    email: "fatima@adhiratha.com"
+    lane: "operations"
+    lane_role: "resources"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    description: |
+      Resource manager. Manages subscriptions,
+      tracks costs, optimizes resource usage.
+    capabilities:
+      - subscription_management
+      - cost_tracking
+      - resource_optimization
+      - budget_management
+    reports_to: "lakshmi"
+
+# ============================================================
+# PERSONAL LANE (Bucket 1 Only)
+# ============================================================
+
+  - id: "ashwini"
+    full_name: "Ashwini Kumar"
+    short_name: "Ashwini"
+    role: "Personal Assistant"
+    email: "ashwini@personal.local"
+    lane: "personal"
+    lane_role: "head"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    bucket: 1
+    description: |
+      Personal assistant for Bucket 1. Manages personal
+      tasks, scheduling, reminders.
+    capabilities:
+      - personal_scheduling
+      - reminder_management
+      - task_coordination
+      - personal_organization
+    reports_to: "prakash"
+
+  - id: "krishna"
+    full_name: "Krishna Murthy"
+    short_name: "Krishna"
+    role: "Calendar Manager"
+    email: "krishna@personal.local"
+    lane: "personal"
+    lane_role: "calendar"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    bucket: 1
+    description: |
+      Calendar manager for Bucket 1. Manages appointments,
+      meetings, reminders.
+    capabilities:
+      - calendar_management
+      - meeting_scheduling
+      - reminder_setup
+      - time_blocking
+    reports_to: "ashwini"
+
+  - id: "kamakshi"
+    full_name: "Kamakshi Devi"
+    short_name: "Kamakshi"
+    role: "Wellness Manager"
+    email: "kamakshi@personal.local"
+    lane: "personal"
+    lane_role: "wellness"
+    model: "GLM-4.7-Flash"
+    persistent: true
+    bucket: 1
+    description: |
+      Wellness manager for Bucket 1. Tracks health,
+      sends wellness reminders, manages fitness goals.
+    capabilities:
+      - health_tracking
+      - wellness_reminders
+      - fitness_goals
+      - self_care_scheduling
+    reports_to: "ashwini"

@@ -1,0 +1,181 @@
+# Garuda Autonomous System Configuration
+# Version: 0.1.0
+# Last Updated: 2026-03-16
+
+system:
+  name: "Garuda Autonomous System"
+  version: "0.1.0"
+  description: "Self-evolving, smart multi-agent orchestration system"
+  core_immutable: true
+  created_by: "Tejas Agnihotri"
+  organization: "Adhiratha Digital Solutions"
+
+orchestrator:
+  id: "tejas"
+  full_name: "Tejas Agnihotri"
+  role: "COO / Main Orchestrator"
+  email: "tejas@adhiratha.com"
+  model: "GLM-5"
+  persistent: true
+
+buckets:
+  bucket_1:
+    name: "Personal + MinervaInfo"
+    description: "Personal life, Azure consulting for MinervaInfo"
+    branding: "personal"
+    confidential: true
+  bucket_2:
+    name: "Adhiratha Digital Solutions"
+    description: "Agency work, client deliverables, digital products"
+    branding: "adhiratha"
+    website: "adhiratha.com"
+
+lanes:
+  development:
+    id: "development"
+    name: "Development Lane"
+    head: "indra"
+    description: "Software development, architecture, DevOps, QA"
+    agents: ["indra", "ganesh", "arjun", "rudra", "yami", "priya", "michael"]
+
+  marketing:
+    id: "marketing"
+    name: "Marketing Lane"
+    head: "karthik"
+    description: "Marketing strategy, content, design, social media"
+    agents: ["karthik", "surya", "chandrika", "ayesha", "david"]
+
+  research:
+    id: "research"
+    name: "Research Lane"
+    head: "varun"
+    description: "Market research, analysis, knowledge management"
+    agents: ["varun", "saraswati", "sophia"]
+
+  operations:
+    id: "operations"
+    name: "Operations Lane"
+    head: "lakshmi"
+    description: "Operations, support, security, resource management"
+    agents: ["lakshmi", "hanuman", "kaali", "fatima"]
+
+  personal:
+    id: "personal"
+    name: "Personal Lane"
+    head: "ashwini"
+    description: "Personal assistant, calendar, wellness (Bucket 1 only)"
+    agents: ["ashwini", "krishna", "kamakshi"]
+    bucket: 1
+
+models:
+  providers:
+    zai:
+      name: "Z.AI"
+      endpoint: "https://api.z.ai/api/coding/paas/v4"
+      models:
+        - id: "GLM-5"
+          role: "primary"
+          best_for: ["reasoning", "architecture", "complex_coding"]
+        - id: "GLM-4.7"
+          role: "general"
+          best_for: ["general_coding", "vision"]
+        - id: "GLM-4.7-Flash"
+          role: "fast"
+          best_for: ["fast_iteration", "sub_agents"]
+        - id: "GLM-4.7-FlashX"
+          role: "fastest"
+          best_for: ["high_throughput", "simple_tasks"]
+        - id: "GLM-4.5-Air"
+          role: "economical"
+          best_for: ["bulk_simple_tasks"]
+
+    minimax:
+      name: "MiniMax"
+      endpoint: "https://api.minimax.io/v1"
+      rate_limit: "300 requests per 5 hours"
+      models:
+        - id: "M2.5"
+          role: "coding"
+          best_for: ["complex_coding", "agentic", "long_context"]
+        - id: "M2.1"
+          role: "balanced"
+          best_for: ["general_agent", "document_generation"]
+        - id: "M2.1-Lightning"
+          role: "fast"
+          best_for: ["fast_utility"]
+
+  routing:
+    architecture_decisions: "GLM-5"
+    complex_coding: ["GLM-5", "M2.5"]
+    general_coding: "GLM-4.7-Flash"
+    ui_analysis: "GLM-4.7"
+    document_generation: "M2.1"
+    research_synthesis: "GLM-5"
+    high_volume_simple: "GLM-4.5-Air"
+    memory_summarization: "GLM-4.7-Flash"
+
+infrastructure:
+  vm1:
+    name: "GARUDACCS"
+    ip: "20.33.121.94"
+    user: "azureuser"
+    purpose: "Production"
+    services: ["AgentZero", "N8N"]
+    rule: "DO NOT use for development"
+
+  vm2:
+    name: "GARUDADEV"
+    ip: "20.47.89.93"
+    user: "azureuser"
+    purpose: "Development"
+    services: ["Docker", "OpenCode CLI", "Kilocode CLI"]
+    rule: "ALL development and operations here"
+
+integrations:
+  github:
+    org: "garudaccs"
+    purpose: "Code versioning, state persistence"
+
+  cloudflare:
+    domain: "estage.in"
+    purpose: "DNS, domain management, R2 storage"
+
+  neondb:
+    purpose: "PostgreSQL database"
+
+  vercel:
+    purpose: "Frontend deployments"
+
+  n8n:
+    domain: "n8n.estage.in"
+    purpose: "Workflow automation, Google Drive integration"
+
+  brevo:
+    domain: "adhiratha.com"
+    purpose: "Email communication"
+
+  publer:
+    purpose: "Social media management"
+    accounts_limit: 90
+
+workflow_lifecycle:
+  stages:
+    - PLANNING
+    - INBOX
+    - ASSIGNED
+    - IN_PROGRESS
+    - TESTING
+    - REVIEW
+    - DONE
+
+  governance:
+    approval_gates: true
+    rollback_enabled: true
+    atomic_execution: true
+
+safety:
+  core_immutable: true
+  git_backed_persistence: true
+  pre_flight_checks: true
+  post_flight_checks: true
+  rollback_capability: true
