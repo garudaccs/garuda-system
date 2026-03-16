@@ -1,0 +1,286 @@
+{
+  "name": "Garuda Skills Registry",
+  "version": "0.1.0",
+  "description": "Curated skills for Garuda Autonomous System agents",
+  "skills": [
+    {
+      "id": "react-best-practices",
+      "name": "React Best Practices",
+      "category": "development",
+      "source": "vercel-labs/agent-skills",
+      "description": "React and Next.js performance optimization patterns",
+      "agents": [
+        "arjun",
+        "michael",
+        "priya"
+      ],
+      "tags": [
+        "react",
+        "nextjs",
+        "performance",
+        "frontend"
+      ]
+    },
+    {
+      "id": "api-development",
+      "name": "API Development",
+      "category": "development",
+      "source": "garuda/internal",
+      "description": "RESTful API design and development patterns",
+      "agents": [
+        "priya",
+        "arjun",
+        "ganesh"
+      ],
+      "tags": [
+        "api",
+        "rest",
+        "backend",
+        "python",
+        "nodejs"
+      ]
+    },
+    {
+      "id": "git-workflow",
+      "name": "Git Workflow",
+      "category": "development",
+      "source": "garuda/internal",
+      "description": "Git branching, commits, and collaboration patterns",
+      "agents": [
+        "rudra",
+        "arjun",
+        "priya",
+        "michael"
+      ],
+      "tags": [
+        "git",
+        "github",
+        "version-control",
+        "collaboration"
+      ]
+    },
+    {
+      "id": "vercel-deploy",
+      "name": "Vercel Deployment",
+      "category": "development",
+      "source": "vercel-labs/agent-skills",
+      "description": "Deploy applications to Vercel platform",
+      "agents": [
+        "rudra"
+      ],
+      "tags": [
+        "vercel",
+        "deployment",
+        "ci/cd"
+      ]
+    },
+    {
+      "id": "testing-qa",
+      "name": "Testing & QA",
+      "category": "development",
+      "source": "garuda/internal",
+      "description": "Unit testing, integration testing, and QA patterns",
+      "agents": [
+        "yami"
+      ],
+      "tags": [
+        "testing",
+        "qa",
+        "jest",
+        "pytest"
+      ]
+    },
+    {
+      "id": "content-creation",
+      "name": "Content Creation",
+      "category": "marketing",
+      "source": "garuda/internal",
+      "description": "Blog posts, articles, and long-form content creation",
+      "agents": [
+        "chandrika"
+      ],
+      "tags": [
+        "content",
+        "blog",
+        "writing",
+        "seo"
+      ]
+    },
+    {
+      "id": "social-media",
+      "name": "Social Media Management",
+      "category": "marketing",
+      "source": "garuda/internal",
+      "description": "Social media post creation and scheduling with Pabbly",
+      "agents": [
+        "david"
+      ],
+      "tags": [
+        "social",
+        "linkedin",
+        "twitter",
+        "pabbly"
+      ]
+    },
+    {
+      "id": "email-marketing",
+      "name": "Email Marketing",
+      "category": "marketing",
+      "source": "garuda/internal",
+      "description": "Email campaign creation and management with Brevo",
+      "agents": [
+        "karthik",
+        "surya"
+      ],
+      "tags": [
+        "email",
+        "brevo",
+        "campaigns",
+        "newsletters"
+      ]
+    },
+    {
+      "id": "web-design",
+      "name": "Web Design Guidelines",
+      "category": "marketing",
+      "source": "vercel-labs/agent-skills",
+      "description": "UI code review for accessibility and UX",
+      "agents": [
+        "ayesha"
+      ],
+      "tags": [
+        "design",
+        "ui",
+        "ux",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "market-research",
+      "name": "Market Research",
+      "category": "research",
+      "source": "garuda/internal",
+      "description": "Competitor analysis and market trends research",
+      "agents": [
+        "varun",
+        "sophia"
+      ],
+      "tags": [
+        "research",
+        "competitor",
+        "analysis",
+        "market"
+      ]
+    },
+    {
+      "id": "documentation",
+      "name": "Technical Documentation",
+      "category": "research",
+      "source": "garuda/internal",
+      "description": "Technical documentation and knowledge base creation",
+      "agents": [
+        "saraswati"
+      ],
+      "tags": [
+        "documentation",
+        "wiki",
+        "knowledge-base"
+      ]
+    },
+    {
+      "id": "data-analysis",
+      "name": "Data Analysis",
+      "category": "research",
+      "source": "garuda/internal",
+      "description": "Data analysis and visualization patterns",
+      "agents": [
+        "sophia"
+      ],
+      "tags": [
+        "data",
+        "analysis",
+        "visualization",
+        "charts"
+      ]
+    },
+    {
+      "id": "n8n-automation",
+      "name": "N8N Automation",
+      "category": "operations",
+      "source": "garuda/internal",
+      "description": "N8N workflow automation patterns",
+      "agents": [
+        "lakshmi",
+        "hanuman"
+      ],
+      "tags": [
+        "n8n",
+        "automation",
+        "workflow",
+        "integration"
+      ]
+    },
+    {
+      "id": "cloudflare-management",
+      "name": "Cloudflare Management",
+      "category": "operations",
+      "source": "garuda/internal",
+      "description": "DNS, CDN, and security configuration with Cloudflare",
+      "agents": [
+        "kaali",
+        "rudra"
+      ],
+      "tags": [
+        "cloudflare",
+        "dns",
+        "cdn",
+        "security"
+      ]
+    },
+    {
+      "id": "customer-support",
+      "name": "Customer Support",
+      "category": "operations",
+      "source": "garuda/internal",
+      "description": "Customer support ticket handling and resolution",
+      "agents": [
+        "hanuman"
+      ],
+      "tags": [
+        "support",
+        "tickets",
+        "customer-service"
+      ]
+    },
+    {
+      "id": "task-routing",
+      "name": "Task Routing",
+      "category": "orchestration",
+      "source": "garuda/internal",
+      "description": "Intelligent task routing to appropriate lanes",
+      "agents": [
+        "tejas"
+      ],
+      "tags": [
+        "routing",
+        "orchestration",
+        "coordination"
+      ]
+    },
+    {
+      "id": "preflight-checks",
+      "name": "Pre-Flight Checks",
+      "category": "orchestration",
+      "source": "garuda/internal",
+      "description": "System validation before operations",
+      "agents": [
+        "tejas"
+      ],
+      "tags": [
+        "validation",
+        "checks",
+        "preflight"
+      ]
+    }
+  ]
+}
